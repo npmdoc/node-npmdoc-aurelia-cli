@@ -1,0 +1,2526 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://aurelia.io"
+
+    >aurelia-cli (v0.28.0)</a>
+</h1>
+<h4>The command line tooling for Aurelia.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli">module aurelia-cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.CLI">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>CLI
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.CLIOptions">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>CLIOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.Project">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>Project
+            <span class="apidocSignatureSpan">(ui, dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.ProjectItem">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>ProjectItem
+            <span class="apidocSignatureSpan">(name, isDirectory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.UI">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>UI
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>build</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>dependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>file_system</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>mkdirp</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>npm</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>project</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>project_item</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>string</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aurelia-cli.</span>ui</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.build">module aurelia-cli.build</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.build.bundle">
+            function <span class="apidocSignatureSpan">aurelia-cli.build.</span>bundle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.build.createLoaderCode">
+            function <span class="apidocSignatureSpan">aurelia-cli.build.</span>createLoaderCode
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.build.createLoaderConfig">
+            function <span class="apidocSignatureSpan">aurelia-cli.build.</span>createLoaderConfig
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.build.dest">
+            function <span class="apidocSignatureSpan">aurelia-cli.build.</span>dest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.build.src">
+            function <span class="apidocSignatureSpan">aurelia-cli.build.</span>src
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.dependencies">module aurelia-cli.dependencies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.dependencies.getSupportedVersion">
+            function <span class="apidocSignatureSpan">aurelia-cli.dependencies.</span>getSupportedVersion
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.file_system">module aurelia-cli.file_system</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.copySync">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>copySync
+            <span class="apidocSignatureSpan">(sourceFile, targetFile)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.exists">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>exists
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.existsSync">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>existsSync
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.join">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>join
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.mkdir">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>mkdir
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.mkdirp">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>mkdirp
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.readFile">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readFile
+            <span class="apidocSignatureSpan">(path, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.readFileSync">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readFileSync
+            <span class="apidocSignatureSpan">(path, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.readdir">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readdir
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.readdirSync">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readdirSync
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.resolve">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>resolve
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.stat">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>stat
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.statSync">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>statSync
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.file_system.writeFile">
+            function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>writeFile
+            <span class="apidocSignatureSpan">(path, content, encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.logger">module aurelia-cli.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.logger.Logger">
+            function <span class="apidocSignatureSpan">aurelia-cli.logger.</span>Logger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.mkdirp">module aurelia-cli.mkdirp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.mkdirp.mkdirp">
+            function <span class="apidocSignatureSpan">aurelia-cli.</span>mkdirp
+            <span class="apidocSignatureSpan">(p, opts, f, made)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.npm">module aurelia-cli.npm</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.npm.NPM">
+            function <span class="apidocSignatureSpan">aurelia-cli.npm.</span>NPM
+            <span class="apidocSignatureSpan">(packages, npmOptions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.project">module aurelia-cli.project</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.project.Project">
+            function <span class="apidocSignatureSpan">aurelia-cli.project.</span>Project
+            <span class="apidocSignatureSpan">(ui, dir)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.project_item">module aurelia-cli.project_item</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.project_item.ProjectItem">
+            function <span class="apidocSignatureSpan">aurelia-cli.project_item.</span>ProjectItem
+            <span class="apidocSignatureSpan">(name, isDirectory)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.string">module aurelia-cli.string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.string.buildFromMetadata">
+            function <span class="apidocSignatureSpan">aurelia-cli.string.</span>buildFromMetadata
+            <span class="apidocSignatureSpan">(metadata, width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.string.createLines">
+            function <span class="apidocSignatureSpan">aurelia-cli.string.</span>createLines
+            <span class="apidocSignatureSpan">(text, currentIndent, width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.string.lowerCamelCase">
+            function <span class="apidocSignatureSpan">aurelia-cli.string.</span>lowerCamelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.string.sluggify">
+            function <span class="apidocSignatureSpan">aurelia-cli.string.</span>sluggify
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.string.upperCamelCase">
+            function <span class="apidocSignatureSpan">aurelia-cli.string.</span>upperCamelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aurelia-cli.ui">module aurelia-cli.ui</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.ui.ConsoleUI">
+            function <span class="apidocSignatureSpan">aurelia-cli.ui.</span>ConsoleUI
+            <span class="apidocSignatureSpan">(cliOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aurelia-cli.ui.UI">
+            function <span class="apidocSignatureSpan">aurelia-cli.ui.</span>UI
+            <span class="apidocSignatureSpan">{{signature}}</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli" id="apidoc.module.aurelia-cli">module aurelia-cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.CLI" id="apidoc.element.aurelia-cli.CLI">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>CLI
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  constructor(options) {
+    this.options = options || new CLIOptions();
+    this.container = new Container();
+    this.ui = new ui.ConsoleUI(this.options);
+    this.configureContainer();
+  }
+
+  run(cmd, args) {
+    if (cmd === &#x27;--version&#x27; || cmd === &#x27;-v&#x27;) {
+      return this.ui.log(require(&#x27;../package.json&#x27;).version);
+    }
+
+    return this._establishProject(this.options)
+      .then(project =&#x3e; {
+        if (project) {
+          this.project = project;
+          this.container.registerInstance(Project, project);
+        }
+
+        return this.createCommand(cmd, args);
+      })
+      .then((command) =&#x3e; {
+        this.configureLogger();
+
+        return command.execute(args);
+      });
+  }
+
+  configureLogger() {
+    LogManager.addAppender(this.container.get(Logger));
+    let level = CLIOptions.hasFlag(&#x27;debug&#x27;) ? LogManager.logLevel.debug : LogManager.logLevel.info;
+    LogManager.setLevel(level);
+  }
+
+  configureContainer() {
+    this.container.registerInstance(CLIOptions, this.options);
+    this.container.registerInstance(ui.UI, this.ui);
+  }
+
+  createCommand(commandText, commandArgs) {
+    return new Promise((resolve, reject) =&#x3e; {
+      if (!commandText) {
+        resolve(this.createHelpCommand());
+        return;
+      }
+
+      let parts = commandText.split(&#x27;:&#x27;);
+      let commandModule = parts[0];
+      let commandName = parts[1] || &#x27;default&#x27;;
+
+      try {
+        let alias = require(&#x27;./commands/alias.json&#x27;)[commandModule];
+        let found = this.container.get(require(`./commands/${alias || commandModule}/command`));
+        Object.assign(this.options, { args: commandArgs });
+        resolve(found);
+      } catch (e) {
+        if (this.project) {
+          this.project.resolveTask(commandModule).then(taskPath =&#x3e; {
+            if (taskPath) {
+              Object.assign(this.options, {
+                taskPath: taskPath,
+                args: commandArgs,
+                commandName: commandName
+              });
+
+              resolve(this.container.get(require(&#x27;./commands/gulp&#x27;)));
+            } else {
+              this.ui.log(`Invalid Command: ${commandText}`);
+              resolve(this.createHelpCommand());
+            }
+          });
+        } else {
+          this.ui.log(`Invalid Command: ${commandText}`);
+          resolve(this.createHelpCommand());
+        }
+      }
+    });
+  }
+
+  createHelpCommand() {
+    return this.container.get(require(&#x27;./commands/help/command&#x27;));
+  }
+
+  _establishProject(options) {
+    if (!options.runningLocally) {
+      return Promise.resolve();
+    }
+
+    return determineWorkingDirectory(process.cwd())
+      .then(dir =&#x3e; dir ? Project.establish(this.ui, dir) : this.ui.log(&#x27;No Aurelia project found.&#x27;));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.CLIOptions" id="apidoc.element.aurelia-cli.CLIOptions">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>CLIOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  constructor() {
+    exports.CLIOptions.instance = this;
+  }
+
+  getEnvironment() {
+    let NODE_ENV;
+    let env = this.getFlagValue(&#x27;env&#x27;) || (process.env.NODE_ENV ? NODE_ENV = process.env.NODE_ENV : undefined) || &#x27;dev&#x27;;
+    if (NODE_ENV) {
+      console.log(`The selected Node Environment (${NODE_ENV}) is not a preconfigured option (&#x27;dev&#x27;, &#x27;stage&#x27;, and &#x27;prod&#x27;)`);
+    }
+    return env;
+  }
+
+  hasFlag(name, shortcut) {
+    if (this.args) {
+      let lookup = &#x27;--&#x27; + name;
+      let found = this.args.indexOf(lookup) !== -1;
+
+      if (found) {
+        return true;
+      }
+
+      lookup = shortcut || (&#x27;-&#x27; + name[0]);
+      found = this.args.indexOf(lookup) !== -1;
+
+      if (found) {
+        return true;
+      }
+
+      lookup = &#x27;-&#x27; + name;
+      return this.args.indexOf(lookup) !== -1;
+    }
+
+    return false;
+  }
+
+  getFlagValue(name, shortcut) {
+    if (this.args) {
+      let lookup = &#x27;--&#x27; + name;
+      let index = this.args.indexOf(lookup);
+
+      if (index !== -1) {
+        return this.args[index + 1] || null;
+      }
+
+      lookup = shortcut || (&#x27;-&#x27; + name[0]);
+      index = this.args.indexOf(lookup);
+
+      if (index !== -1) {
+        return this.args[index + 1] || null;
+      }
+
+      lookup = &#x27;-&#x27; + name;
+      index = this.args.indexOf(lookup);
+
+      if (index !== -1) {
+        return this.args[index + 1] || null;
+      }
+
+      return null;
+    }
+
+    return null;
+  }
+
+  static hasFlag(name, shortcut) {
+    return exports.CLIOptions.instance.hasFlag(name, shortcut);
+  }
+
+  static getFlagValue(name, shortcut) {
+    return exports.CLIOptions.instance.getFlagValue(name, shortcut);
+  }
+
+  static getEnvironment() {
+    return exports.CLIOptions.instance.getEnvironment();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.Project" id="apidoc.element.aurelia-cli.Project">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>Project
+        <span class="apidocSignatureSpan">(ui, dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  static establish(ui, dir) {
+    process.chdir(dir);
+
+    return fs.readFile(path.join(dir, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;)).then(model =&#x3e; {
+      return fs.readFile(path.join(dir, &#x27;package.json&#x27;)).then(pack =&#x3e; {
+        return new exports.Project(ui, dir, JSON.parse(model.toString()), JSON.parse(pack.toString()));
+      });
+    });
+  }
+
+  constructor(ui, directory, model, pack) {
+    this.ui = ui;
+    this.directory = directory;
+    this.model = model;
+    this.package = pack;
+    this.taskDirectory = path.join(directory, &#x27;aurelia_project/tasks&#x27;);
+    this.generatorDirectory = path.join(directory, &#x27;aurelia_project/generators&#x27;);
+    this.aureliaJSONPath = path.join(directory, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;);
+
+    this.locations = Object.keys(model.paths).map(key =&#x3e; this[key] = ProjectItem.directory(model.paths[key]));
+    this.locations.push(this.generators = ProjectItem.directory(&#x27;aurelia_project/generators&#x27;));
+    this.locations.push(this.tasks = ProjectItem.directory(&#x27;aurelia_project/tasks&#x27;));
+  }
+
+  commitChanges() {
+    return Promise.all(this.locations.map(x =&#x3e; x.create(this.ui, this.directory)));
+  }
+
+  makeFileName(name) {
+    return string.sluggify(name);
+  }
+
+  makeClassName(name) {
+    return string.upperCamelCase(name);
+  }
+
+  makeFunctionName(name) {
+    return string.lowerCamelCase(name);
+  }
+
+  installTranspiler() {
+    switch (this.model.transpiler.id) {
+    case &#x27;babel&#x27;:
+      installBabel();
+      break;
+    case &#x27;typescript&#x27;:
+      installTypeScript();
+      break;
+    default:
+      throw new Error(`${this.model.transpiler.displayName} is not a supported transpiler.`);
+    }
+  }
+
+  getExport(m, name) {
+    return name ? m[name] : m.default;
+  }
+
+  getGeneratorMetadata() {
+    return getMetadata(this.generatorDirectory);
+  }
+
+  getTaskMetadata() {
+    return getMetadata(this.taskDirectory);
+  }
+
+  resolveGenerator(name) {
+    let potential = path.join(this.generatorDirectory, `${name}${this.model.transpiler.fileExtension}`);
+    return fs.stat(potential).then(() =&#x3e; potential).catch(() =&#x3e; null);
+  }
+
+  resolveTask(name) {
+    let potential = path.join(this.taskDirectory, `${name}${this.model.transpiler.fileExtension}`);
+    return fs.stat(potential).then(() =&#x3e; potential).catch(() =&#x3e; null);
+  }
+
+  addDependency(bundle, dependency) {
+    if (!bundle.dependencies) {
+      bundle.dependencies = [];
+    }
+
+    bundle.dependencies.push(dependency);
+  }
+
+  addOrReplaceDependency(bundle, dependency) {
+    let name = (dependency.name || dependency);
+    if (this.hasDependency(bundle, name)) {
+      this.replaceDependency(bundle, this.getDependency(bundle, name), dependency);
+    } else {
+      this.addDependency(bundle, dependency);
+    }
+  }
+
+  replaceDependency(bundle, oldDependency, newDependency) {
+    let index = bundle.dependencies.indexOf(oldDependency);
+
+    bundle.dependencies[index] = newDependency;
+  }
+
+  removeDependency(bundle, dependency) {
+    let index = bundle.dependencies.indexOf(dependency);
+
+    bundle.dependencies.splice(index, 1);
+  }
+
+  getDependency(bundle, name) {
+    return (bundle.dependencies || []).find(item =&#x3e; (item.name || item) === name);
+  }
+
+  hasDependency(bundle, name) {
+    return this.getDependency(bundle, name) !== undefined;
+  }
+
+  hasBundle(bundleName) {
+    return this.getBundle(bundleName) !== undefined;
+  }
+
+  getBundle(bundleName) {
+    let bundles = this.model.build.bundles;
+    return bundles.find(item =&#x3e; item.name === bundleName);
+  }
+
+  addBundle(bundle) {
+    let bundles = this.model.build.bundles;
+
+    bundles.push(bundle);
+  }
+
+  removeBundle(bundle) {
+    let bundles = this.model.build.bundles;
+    let index = bundles.indexOf(bundle);
+
+    bundles.splice(index, 1);
+  }
+
+  replaceBundle(oldBundle, newBundle) {
+    let bundles = this.model.build.bundles;
+    let index = bundles.indexOf(oldBundle);
+
+    bundles[index] = newBundle;
+  }
+
+  getDefaultBundle() {
+    let bundles = this.model.build.bundles;
+
+    if (bundles.length === 0) {
+      throw new Error(&#x27;There are no bundles in aurelia.json. Please create one&#x27;);
+    }
+
+    return this.getLargestB ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.Project = class {
+static establish(ui, dir) {
+  process.chdir(dir);
+
+  return fs.readFile(path.join(dir, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;)).then(model =&#x3e; {
+    return fs.readFile(path.join(dir, &#x27;package.json&#x27;)).then(pack =&#x3e; {
+      return new exports.<span class="apidocCodeKeywordSpan">Project</span>(ui, dir, JSON.parse(model.toString()), JSON.parse(pack
+.toString()));
+    });
+  });
+}
+
+constructor(ui, directory, model, pack) {
+  this.ui = ui;
+  this.directory = directory;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.ProjectItem" id="apidoc.element.aurelia-cli.ProjectItem">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>ProjectItem
+        <span class="apidocSignatureSpan">(name, isDirectory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  constructor(name, isDirectory) {
+    this.name = name;
+    this.isDirectory = !!isDirectory;
+    this._fileExistsStrategy = &#x27;replace&#x27;;
+  }
+
+  get children() {
+    if (!this._children) {
+      this._children = [];
+    }
+
+    return this._children;
+  }
+
+  get transformers() {
+    if (!this._transformers) {
+      this._transformers = [];
+    }
+
+    return this._transformers;
+  }
+
+  skipIfExists() {
+    this._fileExistsStrategy = &#x27;skip&#x27;;
+    return this;
+  }
+
+  mergeIfExists() {
+    this._fileExistsStrategy = &#x27;merge&#x27;;
+    return this;
+  }
+
+  askUserIfExists() {
+    this._fileExistsStrategy = &#x27;ask&#x27;;
+    return this;
+  }
+
+  add() {
+    if (!this.isDirectory) {
+      throw new Error(&#x27;You cannot add items to a non-directory.&#x27;);
+    }
+
+    for (let i = 0; i &#x3c; arguments.length; ++i) {
+      let child = arguments[i];
+
+      if (this.children.indexOf(child) !== -1) {
+        continue;
+      }
+
+      child.parent = this;
+      this.children.push(child);
+    }
+
+    return this;
+  }
+
+  calculateRelativePath(fromLocation) {
+    if (this === fromLocation) {
+      return &#x27;&#x27;;
+    }
+
+    let parentRelativePath = (this.parent &#x26;&#x26; this.parent !== fromLocation)
+      ? this.parent.calculateRelativePath(fromLocation)
+      : &#x27;&#x27;;
+
+    return path.posix.join(parentRelativePath, this.name);
+  }
+
+  setJSONObject(jsonObject) {
+    this.jsonObject = jsonObject;
+    return this;
+  }
+
+  setText(text) {
+    this.text = text;
+    return this;
+  }
+
+  setSourcePath(p) {
+    this.sourcePath = p;
+    return this;
+  }
+
+  transformWith(callback) {
+    this.transformers.push(callback);
+    return this;
+  }
+
+  create(ui, relativeTo) {
+    let fullPath = relativeTo ? path.posix.join(relativeTo, this.name) : this.name;
+
+    if (this.isDirectory) {
+      return fs.stat(fullPath)
+        .then(result =&#x3e; result)
+        .catch(() =&#x3e; fs.mkdir(fullPath))
+        .then(() =&#x3e; Promise.all(this.children.map(child =&#x3e;
+          child.create(ui, fullPath)
+        )));
+    } else if (this.sourcePath) {
+      return fs.readFile(this.sourcePath).then(data =&#x3e; {
+        return this._write(fullPath, data, ui);
+      });
+    } else if (this.jsonObject) {
+      return this._write(fullPath, JSON.stringify(this.jsonObject, null, 2), ui);
+    } else if (this.text) {
+      return this._write(fullPath, this.text, ui);
+    }
+
+    return Promise.resolve();
+  }
+
+  _write(fullPath, content, ui) {
+    for (let i = 0, ii = this.transformers.length; i &#x3c; ii; ++i) {
+      content = this.transformers[i](content);
+    }
+
+    return fs.stat(fullPath).then(() =&#x3e; {
+      switch (this._fileExistsStrategy) {
+      case &#x27;skip&#x27;:
+        return Promise.resolve();
+      case &#x27;merge&#x27;:
+        if (this.name === &#x27;package.json&#x27;) {
+          return fs.readFile(fullPath).then(data =&#x3e; {
+            let json = JSON.parse(data.toString());
+            let merged = mergePackageJson(json, this.jsonObject);
+            return fs.writeFile(fullPath, JSON.stringify(merged, null, 2));
+          });
+        }
+        throw new Error(`cannot merge ${this.name}`);
+      case &#x27;ask&#x27;:
+        let question = `An existing file named &#x27;${this.name}&#x27; was found. What would you like to do?`;
+        let options = [
+          {
+            displayName: &#x27;Keep It&#x27;,
+            description: &#x27;Keeps your existing file. You may need to update its contents to work with Aurelia.&#x27;
+          },
+          {
+            displayName: &#x27;Replace It&#x27;,
+            description: &#x27;Replaces the existing file with a new one designed for Aurelia.&#x27;
+          }
+        ];
+
+        return ui.question(question, options).then(answer =&#x3e; {
+          if (answer === options[0]) {
+            return Promise.resolve();
+          }
+
+          return fs.writeFile(fullPath, content);
+        });
+      default:
+        return fs.writeFile(fullPath, content);
+      }
+    }).catch(() =&#x3e; fs.writeFile(fullPath, content));
+  }
+
+  static jsonObject(name, jsonObject) {
+    return new exports.ProjectItem(name, false).setJSONObject(jsonObject);
+  }
+
+  static text(name, text) {
+    return new exports.ProjectItem(name, false).setText(text);
+  }
+
+  static resource(name, resourc ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    default:
+      return fs.writeFile(fullPath, content);
+    }
+  }).catch(() =&#x3e; fs.writeFile(fullPath, content));
+}
+
+static jsonObject(name, jsonObject) {
+  return new exports.<span class="apidocCodeKeywordSpan">ProjectItem</span>(name, false).setJSONObject(jsonObject);
+}
+
+static text(name, text) {
+  return new exports.ProjectItem(name, false).setText(text);
+}
+
+static resource(name, resourcePath, extensionOrConfig) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.UI" id="apidoc.element.aurelia-cli.UI">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>UI
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.build" id="apidoc.module.aurelia-cli.build">module aurelia-cli.build</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.build.bundle" id="apidoc.element.aurelia-cli.build.bundle">
+        function <span class="apidocSignatureSpan">aurelia-cli.build.</span>bundle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bundle = function () {
+  return through.obj(function(file, encoding, callback) {
+    callback(null, capture(file));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.build.createLoaderCode" id="apidoc.element.aurelia-cli.build.createLoaderCode">
+        function <span class="apidocSignatureSpan">aurelia-cli.build.</span>createLoaderCode
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createLoaderCode = function (p) {
+  const createLoaderCode = require(&#x27;./loader&#x27;).createLoaderCode;
+  project = p || project;
+  return buildLoaderConfig(project)
+      .then(() =&#x3e; {
+        let platform = project.build.targets[0];
+        return createLoaderCode(platform, bundler);
+      });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.build.createLoaderConfig" id="apidoc.element.aurelia-cli.build.createLoaderConfig">
+        function <span class="apidocSignatureSpan">aurelia-cli.build.</span>createLoaderConfig
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createLoaderConfig = function (p) {
+  const createLoaderConfig = require(&#x27;./loader&#x27;).createLoaderConfig;
+  project = p || project;
+
+  return buildLoaderConfig(project)
+      .then(() =&#x3e; {
+        let platform = project.build.targets[0];
+        return createLoaderConfig(platform, bundler);
+      });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.build.dest" id="apidoc.element.aurelia-cli.build.dest">
+        function <span class="apidocSignatureSpan">aurelia-cli.build.</span>dest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dest = function () {
+  return bundler.build()
+    .then(() =&#x3e; bundler.write());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.build.src" id="apidoc.element.aurelia-cli.build.src">
+        function <span class="apidocSignatureSpan">aurelia-cli.build.</span>src
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">src = function (p) {
+  if (bundler) {
+    isUpdating = true;
+    return Promise.resolve(bundler);
+  }
+
+  through = require(&#x27;through2&#x27;); //dep of vinyl-fs
+  project = p;
+  return Bundler.create(project, new PackageAnalyzer(project)).then(b =&#x3e; bundler = b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.dependencies" id="apidoc.module.aurelia-cli.dependencies">module aurelia-cli.dependencies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.dependencies.getSupportedVersion" id="apidoc.element.aurelia-cli.dependencies.getSupportedVersion">
+        function <span class="apidocSignatureSpan">aurelia-cli.dependencies.</span>getSupportedVersion
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSupportedVersion = function (name) {
+  return versionMap[name] || &#x27;latest&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.file_system" id="apidoc.module.aurelia-cli.file_system">module aurelia-cli.file_system</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.copySync" id="apidoc.element.aurelia-cli.file_system.copySync">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>copySync
+        <span class="apidocSignatureSpan">(sourceFile, targetFile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copySync = function (sourceFile, targetFile) {
+  fs.writeFileSync(targetFile, fs.readFileSync(sourceFile));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.exists" id="apidoc.element.aurelia-cli.file_system.exists">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>exists
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (path) {
+  return new Promise((resolve, reject) =&#x3e; fs.exists(path, resolve));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const nodePath = require(&#x27;path&#x27;);
+const mkdirp = require(&#x27;./mkdirp&#x27;).mkdirp;
+
+exports.fs = fs;
+
+/**
+ * @deprecated
+ *  fs.<span class="apidocCodeKeywordSpan">exists</span>() is deprecated.
+ *  See https://nodejs.org/api/fs.html#fs_fs_exists_path_callback.
+ *  Functions using it can also not be properly tested.
+ */
+exports.exists = function(path) {
+  return new Promise((resolve, reject) =&#x3e; fs.exists(path, resolve));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.existsSync" id="apidoc.element.aurelia-cli.file_system.existsSync">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>existsSync
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">existsSync = function (path) {
+  return fs.existsSync(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (error) reject(error);
+    else resolve(stats);
+  });
+});
+};
+
+exports.existsSync = function(path) {
+return fs.<span class="apidocCodeKeywordSpan">existsSync</span>(path);
+};
+
+exports.mkdir = function(path) {
+return new Promise((resolve, reject) =&#x3e; {
+  fs.mkdir(path, (error, result) =&#x3e; {
+    if (error) reject(error);
+    else resolve();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.join" id="apidoc.element.aurelia-cli.file_system.join">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>join
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">join = function () {
+  return nodePath.join.apply(this, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  log(logger, level, message, rest) {
+    let msg = `${level} [${logger.id}] ${message}`;
+    let args = Array.prototype.slice.call(rest, 2);
+
+    if (args.length &#x3e; 0) {
+      msg += ` ${args.map(x =&#x3e; JSON.stringify(x)).<span class="apidocCodeKeywordSpan">join</span>(&#x27; &#x27;)}`;
+    }
+
+    this.ui.log(msg);
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.mkdir" id="apidoc.element.aurelia-cli.file_system.mkdir">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>mkdir
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.mkdir(path, (error, result) =&#x3e; {
+      if (error) reject(error);
+      else resolve();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.existsSync = function(path) {
+  return fs.existsSync(path);
+};
+
+exports.mkdir = function(path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.<span class="apidocCodeKeywordSpan">mkdir</span>(path, (error, result) =&#x3e; {
+      if (error) reject(error);
+      else resolve();
+    });
+  });
+};
+
+exports.mkdirp = function(path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.mkdirp" id="apidoc.element.aurelia-cli.file_system.mkdirp">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>mkdirp
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdirp = function (path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    mkdirp(path, error =&#x3e; {
+      if (error) reject(error);
+      else resolve();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.readFile" id="apidoc.element.aurelia-cli.file_system.readFile">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readFile
+        <span class="apidocSignatureSpan">(path, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFile = function (path, encoding) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.readFile(path, encoding || &#x27;utf8&#x27;, (error, data) =&#x3e; {
+      if (error) reject(error);
+      else resolve(data);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.readdirSync = function(path) {
+  return fs.readdirSync(path);
+};
+
+exports.readFile = function(path, encoding) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.<span class="apidocCodeKeywordSpan">readFile</span>(path, encoding || &#x27;utf8&#x27;, (error, data) =&#x3e; {
+      if (error) reject(error);
+      else resolve(data);
+    });
+  });
+};
+
+exports.readFileSync = fs.readFileSync;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.readFileSync" id="apidoc.element.aurelia-cli.file_system.readFileSync">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readFileSync
+        <span class="apidocSignatureSpan">(path, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFileSync = function (path, encoding) {
+  return fs.readFileSync(path, encoding || &#x27;utf8&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  });
+};
+
+exports.readFileSync = fs.readFileSync;
+
+exports.readFileSync = function(path, encoding) {
+  return fs.<span class="apidocCodeKeywordSpan">readFileSync</span>(path, encoding || &#x27;utf8&#x27;);
+};
+
+exports.copySync = function(sourceFile, targetFile) {
+  fs.writeFileSync(targetFile, fs.readFileSync(sourceFile));
+};
+
+exports.resolve = function(path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.readdir" id="apidoc.element.aurelia-cli.file_system.readdir">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readdir
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readdir = function (path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.readdir(path, (error, files) =&#x3e; {
+      if (error) reject(error);
+      else resolve(files);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      else resolve();
+    });
+  });
+};
+
+exports.readdir = function(path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.<span class="apidocCodeKeywordSpan">readdir</span>(path, (error, files) =&#x3e; {
+      if (error) reject(error);
+      else resolve(files);
+    });
+  });
+};
+
+exports.readdirSync = function(path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.readdirSync" id="apidoc.element.aurelia-cli.file_system.readdirSync">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>readdirSync
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readdirSync = function (path) {
+  return fs.readdirSync(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (error) reject(error);
+    else resolve(files);
+  });
+});
+};
+
+exports.readdirSync = function(path) {
+return fs.<span class="apidocCodeKeywordSpan">readdirSync</span>(path);
+};
+
+exports.readFile = function(path, encoding) {
+return new Promise((resolve, reject) =&#x3e; {
+  fs.readFile(path, encoding || &#x27;utf8&#x27;, (error, data) =&#x3e; {
+    if (error) reject(error);
+    else resolve(data);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.resolve" id="apidoc.element.aurelia-cli.file_system.resolve">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>resolve
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (path) {
+  return nodePath.resolve(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.copySync = function(sourceFile, targetFile) {
+  fs.writeFileSync(targetFile, fs.readFileSync(sourceFile));
+};
+
+exports.resolve = function(path) {
+  return nodePath.<span class="apidocCodeKeywordSpan">resolve</span>(path);
+};
+
+exports.join = function() {
+  return nodePath.join.apply(this, Array.prototype.slice.call(arguments));
+};
+
+exports.statSync = function(path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.stat" id="apidoc.element.aurelia-cli.file_system.stat">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>stat
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stat = function (path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.stat(path, (error, stats) =&#x3e; {
+      if (error) reject(error);
+      else resolve(stats);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+exports.exists = function(path) {
+  return new Promise((resolve, reject) =&#x3e; fs.exists(path, resolve));
+};
+
+exports.stat = function(path) {
+  return new Promise((resolve, reject) =&#x3e; {
+    fs.<span class="apidocCodeKeywordSpan">stat</span>(path, (error, stats) =&#x3e; {
+      if (error) reject(error);
+      else resolve(stats);
+    });
+  });
+};
+
+exports.existsSync = function(path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.statSync" id="apidoc.element.aurelia-cli.file_system.statSync">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>statSync
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">statSync = function (path) {
+  return fs.statSync(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.join = function() {
+return nodePath.join.apply(this, Array.prototype.slice.call(arguments));
+};
+
+exports.statSync = function(path) {
+return fs.<span class="apidocCodeKeywordSpan">statSync</span>(path);
+};
+
+exports.writeFile = function(path, content, encoding) {
+return new Promise((resolve, reject) =&#x3e; {
+  mkdirp(nodePath.dirname(path), err =&#x3e; {
+    if (err) reject(err);
+    else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.file_system.writeFile" id="apidoc.element.aurelia-cli.file_system.writeFile">
+        function <span class="apidocSignatureSpan">aurelia-cli.file_system.</span>writeFile
+        <span class="apidocSignatureSpan">(path, content, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function (path, content, encoding) {
+  return new Promise((resolve, reject) =&#x3e; {
+    mkdirp(nodePath.dirname(path), err =&#x3e; {
+      if (err) reject(err);
+      else {
+        fs.writeFile(path, content, encoding || &#x27;utf8&#x27;, error =&#x3e; {
+          if (error) reject(error);
+          else resolve();
+        });
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.writeFile = function(path, content, encoding) {
+  return new Promise((resolve, reject) =&#x3e; {
+    mkdirp(nodePath.dirname(path), err =&#x3e; {
+      if (err) reject(err);
+      else {
+        fs.<span class="apidocCodeKeywordSpan">writeFile</span>(path, content, encoding || &#x27;utf8&#x27;, error =&#x3e; {
+          if (error) reject(error);
+          else resolve();
+        });
+      }
+    });
+  });
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.logger" id="apidoc.module.aurelia-cli.logger">module aurelia-cli.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.logger.Logger" id="apidoc.element.aurelia-cli.logger.Logger">
+        function <span class="apidocSignatureSpan">aurelia-cli.logger.</span>Logger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+
+  static inject() { return [UI]; }
+
+  constructor(ui) {
+    this.ui = ui;
+  }
+
+  debug(logger, message) {
+    this.log(logger, &#x27;DEBUG&#x27;, message, arguments);
+  }
+
+  info(logger, message) {
+    this.log(logger, &#x27;INFO&#x27;, message, arguments);
+  }
+
+  warn(logger, message) {
+    this.log(logger, &#x27;WARN&#x27;, message, arguments);
+  }
+
+  error(logger, message) {
+    this.log(logger, &#x27;ERROR&#x27;, message, arguments);
+  }
+
+  log(logger, level, message, rest) {
+    let msg = `${level} [${logger.id}] ${message}`;
+    let args = Array.prototype.slice.call(rest, 2);
+
+    if (args.length &#x3e; 0) {
+      msg += ` ${args.map(x =&#x3e; JSON.stringify(x)).join(&#x27; &#x27;)}`;
+    }
+
+    this.ui.log(msg);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.mkdirp" id="apidoc.module.aurelia-cli.mkdirp">module aurelia-cli.mkdirp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.mkdirp.mkdirp" id="apidoc.element.aurelia-cli.mkdirp.mkdirp">
+        function <span class="apidocSignatureSpan">aurelia-cli.</span>mkdirp
+        <span class="apidocSignatureSpan">(p, opts, f, made)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mkdirp(p, opts, f, made) {
+  if (typeof opts === &#x27;function&#x27;) {
+    f = opts;
+    opts = {};
+  } else if (!opts || typeof opts !== &#x27;object&#x27;) {
+    opts = { mode: opts };
+  }
+
+  let mode = opts.mode;
+  let xfs = opts.fs || fs;
+
+  if (mode === undefined) {
+    mode = _0777 &#x26; (~process.umask());
+  }
+  if (!made) made = null;
+
+  let cb = f || function() {};
+  p = path.resolve(p);
+
+  xfs.mkdir(p, mode, function(er) {
+    if (!er) {
+      made = made || p;
+      return cb(null, made);
+    }
+    switch (er.code) {
+    case &#x27;ENOENT&#x27;:
+      mkdirp(path.dirname(p), opts, function(err, isMade) {
+        if (err) cb(err, isMade);
+        else mkdirp(p, opts, cb, isMade);
+      });
+      break;
+
+    // In the case of any other error, just see if there&#x27;s a dir
+    // there already.  If so, then hooray!  If not, then something
+    // is borked.
+    default:
+      xfs.stat(p, function(er2, stat) {
+        // if the stat fails, then that&#x27;s super weird.
+        // let the original error be the failure reason.
+        if (er2 || !stat.isDirectory()) cb(er, made);
+        else cb(null, made);
+      });
+      break;
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.npm" id="apidoc.module.aurelia-cli.npm">module aurelia-cli.npm</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.npm.NPM" id="apidoc.element.aurelia-cli.npm.NPM">
+        function <span class="apidocSignatureSpan">aurelia-cli.npm.</span>NPM
+        <span class="apidocSignatureSpan">(packages, npmOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  install(packages, npmOptions) {
+    npmOptions = npmOptions || {};
+    const npm = require(&#x27;npm&#x27;);
+
+    let originalWorkingDirectory = process.cwd();
+    process.chdir(npmOptions.workingDirectory || process.cwd());
+
+    return load(npm, npmOptions)
+      .then(() =&#x3e; {
+        return new Promise((resolve, reject) =&#x3e; {
+          npm.commands.install(packages, error =&#x3e; {
+            process.chdir(originalWorkingDirectory);
+
+            if (error) reject(error);
+            else resolve();
+          });
+        });
+      }).catch(error =&#x3e; {
+        process.chdir(originalWorkingDirectory);
+        throw error;
+      });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.project" id="apidoc.module.aurelia-cli.project">module aurelia-cli.project</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.project.Project" id="apidoc.element.aurelia-cli.project.Project">
+        function <span class="apidocSignatureSpan">aurelia-cli.project.</span>Project
+        <span class="apidocSignatureSpan">(ui, dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  static establish(ui, dir) {
+    process.chdir(dir);
+
+    return fs.readFile(path.join(dir, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;)).then(model =&#x3e; {
+      return fs.readFile(path.join(dir, &#x27;package.json&#x27;)).then(pack =&#x3e; {
+        return new exports.Project(ui, dir, JSON.parse(model.toString()), JSON.parse(pack.toString()));
+      });
+    });
+  }
+
+  constructor(ui, directory, model, pack) {
+    this.ui = ui;
+    this.directory = directory;
+    this.model = model;
+    this.package = pack;
+    this.taskDirectory = path.join(directory, &#x27;aurelia_project/tasks&#x27;);
+    this.generatorDirectory = path.join(directory, &#x27;aurelia_project/generators&#x27;);
+    this.aureliaJSONPath = path.join(directory, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;);
+
+    this.locations = Object.keys(model.paths).map(key =&#x3e; this[key] = ProjectItem.directory(model.paths[key]));
+    this.locations.push(this.generators = ProjectItem.directory(&#x27;aurelia_project/generators&#x27;));
+    this.locations.push(this.tasks = ProjectItem.directory(&#x27;aurelia_project/tasks&#x27;));
+  }
+
+  commitChanges() {
+    return Promise.all(this.locations.map(x =&#x3e; x.create(this.ui, this.directory)));
+  }
+
+  makeFileName(name) {
+    return string.sluggify(name);
+  }
+
+  makeClassName(name) {
+    return string.upperCamelCase(name);
+  }
+
+  makeFunctionName(name) {
+    return string.lowerCamelCase(name);
+  }
+
+  installTranspiler() {
+    switch (this.model.transpiler.id) {
+    case &#x27;babel&#x27;:
+      installBabel();
+      break;
+    case &#x27;typescript&#x27;:
+      installTypeScript();
+      break;
+    default:
+      throw new Error(`${this.model.transpiler.displayName} is not a supported transpiler.`);
+    }
+  }
+
+  getExport(m, name) {
+    return name ? m[name] : m.default;
+  }
+
+  getGeneratorMetadata() {
+    return getMetadata(this.generatorDirectory);
+  }
+
+  getTaskMetadata() {
+    return getMetadata(this.taskDirectory);
+  }
+
+  resolveGenerator(name) {
+    let potential = path.join(this.generatorDirectory, `${name}${this.model.transpiler.fileExtension}`);
+    return fs.stat(potential).then(() =&#x3e; potential).catch(() =&#x3e; null);
+  }
+
+  resolveTask(name) {
+    let potential = path.join(this.taskDirectory, `${name}${this.model.transpiler.fileExtension}`);
+    return fs.stat(potential).then(() =&#x3e; potential).catch(() =&#x3e; null);
+  }
+
+  addDependency(bundle, dependency) {
+    if (!bundle.dependencies) {
+      bundle.dependencies = [];
+    }
+
+    bundle.dependencies.push(dependency);
+  }
+
+  addOrReplaceDependency(bundle, dependency) {
+    let name = (dependency.name || dependency);
+    if (this.hasDependency(bundle, name)) {
+      this.replaceDependency(bundle, this.getDependency(bundle, name), dependency);
+    } else {
+      this.addDependency(bundle, dependency);
+    }
+  }
+
+  replaceDependency(bundle, oldDependency, newDependency) {
+    let index = bundle.dependencies.indexOf(oldDependency);
+
+    bundle.dependencies[index] = newDependency;
+  }
+
+  removeDependency(bundle, dependency) {
+    let index = bundle.dependencies.indexOf(dependency);
+
+    bundle.dependencies.splice(index, 1);
+  }
+
+  getDependency(bundle, name) {
+    return (bundle.dependencies || []).find(item =&#x3e; (item.name || item) === name);
+  }
+
+  hasDependency(bundle, name) {
+    return this.getDependency(bundle, name) !== undefined;
+  }
+
+  hasBundle(bundleName) {
+    return this.getBundle(bundleName) !== undefined;
+  }
+
+  getBundle(bundleName) {
+    let bundles = this.model.build.bundles;
+    return bundles.find(item =&#x3e; item.name === bundleName);
+  }
+
+  addBundle(bundle) {
+    let bundles = this.model.build.bundles;
+
+    bundles.push(bundle);
+  }
+
+  removeBundle(bundle) {
+    let bundles = this.model.build.bundles;
+    let index = bundles.indexOf(bundle);
+
+    bundles.splice(index, 1);
+  }
+
+  replaceBundle(oldBundle, newBundle) {
+    let bundles = this.model.build.bundles;
+    let index = bundles.indexOf(oldBundle);
+
+    bundles[index] = newBundle;
+  }
+
+  getDefaultBundle() {
+    let bundles = this.model.build.bundles;
+
+    if (bundles.length === 0) {
+      throw new Error(&#x27;There are no bundles in aurelia.json. Please create one&#x27;);
+    }
+
+    return this.getLargestB ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.Project = class {
+static establish(ui, dir) {
+  process.chdir(dir);
+
+  return fs.readFile(path.join(dir, &#x27;aurelia_project&#x27;, &#x27;aurelia.json&#x27;)).then(model =&#x3e; {
+    return fs.readFile(path.join(dir, &#x27;package.json&#x27;)).then(pack =&#x3e; {
+      return new exports.<span class="apidocCodeKeywordSpan">Project</span>(ui, dir, JSON.parse(model.toString()), JSON.parse(pack
+.toString()));
+    });
+  });
+}
+
+constructor(ui, directory, model, pack) {
+  this.ui = ui;
+  this.directory = directory;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.project_item" id="apidoc.module.aurelia-cli.project_item">module aurelia-cli.project_item</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.project_item.ProjectItem" id="apidoc.element.aurelia-cli.project_item.ProjectItem">
+        function <span class="apidocSignatureSpan">aurelia-cli.project_item.</span>ProjectItem
+        <span class="apidocSignatureSpan">(name, isDirectory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  constructor(name, isDirectory) {
+    this.name = name;
+    this.isDirectory = !!isDirectory;
+    this._fileExistsStrategy = &#x27;replace&#x27;;
+  }
+
+  get children() {
+    if (!this._children) {
+      this._children = [];
+    }
+
+    return this._children;
+  }
+
+  get transformers() {
+    if (!this._transformers) {
+      this._transformers = [];
+    }
+
+    return this._transformers;
+  }
+
+  skipIfExists() {
+    this._fileExistsStrategy = &#x27;skip&#x27;;
+    return this;
+  }
+
+  mergeIfExists() {
+    this._fileExistsStrategy = &#x27;merge&#x27;;
+    return this;
+  }
+
+  askUserIfExists() {
+    this._fileExistsStrategy = &#x27;ask&#x27;;
+    return this;
+  }
+
+  add() {
+    if (!this.isDirectory) {
+      throw new Error(&#x27;You cannot add items to a non-directory.&#x27;);
+    }
+
+    for (let i = 0; i &#x3c; arguments.length; ++i) {
+      let child = arguments[i];
+
+      if (this.children.indexOf(child) !== -1) {
+        continue;
+      }
+
+      child.parent = this;
+      this.children.push(child);
+    }
+
+    return this;
+  }
+
+  calculateRelativePath(fromLocation) {
+    if (this === fromLocation) {
+      return &#x27;&#x27;;
+    }
+
+    let parentRelativePath = (this.parent &#x26;&#x26; this.parent !== fromLocation)
+      ? this.parent.calculateRelativePath(fromLocation)
+      : &#x27;&#x27;;
+
+    return path.posix.join(parentRelativePath, this.name);
+  }
+
+  setJSONObject(jsonObject) {
+    this.jsonObject = jsonObject;
+    return this;
+  }
+
+  setText(text) {
+    this.text = text;
+    return this;
+  }
+
+  setSourcePath(p) {
+    this.sourcePath = p;
+    return this;
+  }
+
+  transformWith(callback) {
+    this.transformers.push(callback);
+    return this;
+  }
+
+  create(ui, relativeTo) {
+    let fullPath = relativeTo ? path.posix.join(relativeTo, this.name) : this.name;
+
+    if (this.isDirectory) {
+      return fs.stat(fullPath)
+        .then(result =&#x3e; result)
+        .catch(() =&#x3e; fs.mkdir(fullPath))
+        .then(() =&#x3e; Promise.all(this.children.map(child =&#x3e;
+          child.create(ui, fullPath)
+        )));
+    } else if (this.sourcePath) {
+      return fs.readFile(this.sourcePath).then(data =&#x3e; {
+        return this._write(fullPath, data, ui);
+      });
+    } else if (this.jsonObject) {
+      return this._write(fullPath, JSON.stringify(this.jsonObject, null, 2), ui);
+    } else if (this.text) {
+      return this._write(fullPath, this.text, ui);
+    }
+
+    return Promise.resolve();
+  }
+
+  _write(fullPath, content, ui) {
+    for (let i = 0, ii = this.transformers.length; i &#x3c; ii; ++i) {
+      content = this.transformers[i](content);
+    }
+
+    return fs.stat(fullPath).then(() =&#x3e; {
+      switch (this._fileExistsStrategy) {
+      case &#x27;skip&#x27;:
+        return Promise.resolve();
+      case &#x27;merge&#x27;:
+        if (this.name === &#x27;package.json&#x27;) {
+          return fs.readFile(fullPath).then(data =&#x3e; {
+            let json = JSON.parse(data.toString());
+            let merged = mergePackageJson(json, this.jsonObject);
+            return fs.writeFile(fullPath, JSON.stringify(merged, null, 2));
+          });
+        }
+        throw new Error(`cannot merge ${this.name}`);
+      case &#x27;ask&#x27;:
+        let question = `An existing file named &#x27;${this.name}&#x27; was found. What would you like to do?`;
+        let options = [
+          {
+            displayName: &#x27;Keep It&#x27;,
+            description: &#x27;Keeps your existing file. You may need to update its contents to work with Aurelia.&#x27;
+          },
+          {
+            displayName: &#x27;Replace It&#x27;,
+            description: &#x27;Replaces the existing file with a new one designed for Aurelia.&#x27;
+          }
+        ];
+
+        return ui.question(question, options).then(answer =&#x3e; {
+          if (answer === options[0]) {
+            return Promise.resolve();
+          }
+
+          return fs.writeFile(fullPath, content);
+        });
+      default:
+        return fs.writeFile(fullPath, content);
+      }
+    }).catch(() =&#x3e; fs.writeFile(fullPath, content));
+  }
+
+  static jsonObject(name, jsonObject) {
+    return new exports.ProjectItem(name, false).setJSONObject(jsonObject);
+  }
+
+  static text(name, text) {
+    return new exports.ProjectItem(name, false).setText(text);
+  }
+
+  static resource(name, resourc ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    default:
+      return fs.writeFile(fullPath, content);
+    }
+  }).catch(() =&#x3e; fs.writeFile(fullPath, content));
+}
+
+static jsonObject(name, jsonObject) {
+  return new exports.<span class="apidocCodeKeywordSpan">ProjectItem</span>(name, false).setJSONObject(jsonObject);
+}
+
+static text(name, text) {
+  return new exports.ProjectItem(name, false).setText(text);
+}
+
+static resource(name, resourcePath, extensionOrConfig) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.string" id="apidoc.module.aurelia-cli.string">module aurelia-cli.string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.string.buildFromMetadata" id="apidoc.element.aurelia-cli.string.buildFromMetadata">
+        function <span class="apidocSignatureSpan">aurelia-cli.string.</span>buildFromMetadata
+        <span class="apidocSignatureSpan">(metadata, width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildFromMetadata = function (metadata, width) {
+  let text = &#x27;&#x27;;
+  metadata.forEach(json =&#x3e; text += transformCommandToStyledText(json, width));
+  return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.string.createLines" id="apidoc.element.aurelia-cli.string.createLines">
+        function <span class="apidocSignatureSpan">aurelia-cli.string.</span>createLines
+        <span class="apidocSignatureSpan">(text, currentIndent, width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createLines(text, currentIndent, width) {
+  let toAdd = currentIndent + text;
+
+  if (toAdd.length &#x3e; width) {
+    let parts = text.split(&#x27; &#x27;);
+    let lines = [];
+    let currentLine = &#x27;&#x27;;
+
+    for (let i = 0, ii = parts.length; i &#x3c; ii; ++i) {
+      let potential = currentIndent + currentLine + &#x27; &#x27; + parts[i];
+
+      if (potential.length &#x3e; width) {
+        lines.push(currentIndent + currentLine.trim());
+        currentLine = parts[i];
+      } else {
+        currentLine = currentLine + &#x27; &#x27; + parts[i];
+      }
+    }
+
+    lines.push(currentIndent + currentLine);
+    toAdd = lines.join(os.EOL);
+  }
+
+  return toAdd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.string.lowerCamelCase" id="apidoc.element.aurelia-cli.string.lowerCamelCase">
+        function <span class="apidocSignatureSpan">aurelia-cli.string.</span>lowerCamelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lowerCamelCase = function (str) {
+  return str.charAt(0).toLowerCase() + str.slice(1).replace(/[_.-](\w|$)/g, (_, x) =&#x3e; x.toUpperCase());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+makeClassName(name) {
+  return string.upperCamelCase(name);
+}
+
+makeFunctionName(name) {
+  return string.<span class="apidocCodeKeywordSpan">lowerCamelCase</span>(name);
+}
+
+installTranspiler() {
+  switch (this.model.transpiler.id) {
+  case &#x27;babel&#x27;:
+    installBabel();
+    break;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.string.sluggify" id="apidoc.element.aurelia-cli.string.sluggify">
+        function <span class="apidocSignatureSpan">aurelia-cli.string.</span>sluggify
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sluggify = function (str) {
+  return str.toString().toLowerCase()
+    .replace(/\s+/g, &#x27;-&#x27;)           // Replace spaces with -
+    .replace(/[^\w\-]+/g, &#x27;&#x27;)       // Remove all non-word chars
+    .replace(/\-\-+/g, &#x27;-&#x27;)         // Replace multiple - with single -
+    .replace(/^-+/, &#x27;&#x27;)             // Trim - from start of text
+    .replace(/-+$/, &#x27;&#x27;);            // Trim - from end of text
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+commitChanges() {
+  return Promise.all(this.locations.map(x =&#x3e; x.create(this.ui, this.directory)));
+}
+
+makeFileName(name) {
+  return string.<span class="apidocCodeKeywordSpan">sluggify</span>(name);
+}
+
+makeClassName(name) {
+  return string.upperCamelCase(name);
+}
+
+makeFunctionName(name) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.string.upperCamelCase" id="apidoc.element.aurelia-cli.string.upperCamelCase">
+        function <span class="apidocSignatureSpan">aurelia-cli.string.</span>upperCamelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upperCamelCase = function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1).replace(/[_.-](\w|$)/g, (_, x) =&#x3e; x.toUpperCase());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+makeFileName(name) {
+  return string.sluggify(name);
+}
+
+makeClassName(name) {
+  return string.<span class="apidocCodeKeywordSpan">upperCamelCase</span>(name);
+}
+
+makeFunctionName(name) {
+  return string.lowerCamelCase(name);
+}
+
+installTranspiler() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aurelia-cli.ui" id="apidoc.module.aurelia-cli.ui">module aurelia-cli.ui</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.ui.ConsoleUI" id="apidoc.element.aurelia-cli.ui.ConsoleUI">
+        function <span class="apidocSignatureSpan">aurelia-cli.ui.</span>ConsoleUI
+        <span class="apidocSignatureSpan">(cliOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {
+  constructor(cliOptions) {
+    this.cliOptions = cliOptions;
+  }
+
+  open() {
+    if (this.rl) {
+      return;
+    }
+
+    this.rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+  }
+
+  close() {
+    if (this.rl) {
+      this.rl.close();
+      this.rl = null;
+    }
+  }
+
+  log(text) {
+    return new Promise((resolve, reject) =&#x3e; {
+      console.log(text);
+      resolve();
+    });
+  }
+
+  ensureAnswer(answer, question, suggestion) {
+    if (answer) {
+      return Promise.resolve(answer);
+    }
+
+    return this.question(question, suggestion);
+  }
+
+  question(text, optionsOrSuggestion) {
+    return new Promise((resolve, reject) =&#x3e; {
+      if (!optionsOrSuggestion || typeof optionsOrSuggestion === &#x27;string&#x27;) {
+        this.open();
+
+        let fullText = os.EOL + text + os.EOL + os.EOL;
+
+        if (optionsOrSuggestion) {
+          fullText += &#x27;[&#x27; + optionsOrSuggestion + &#x27;]&#x27;;
+        }
+
+        this.rl.question(fullText + &#x27;&#x3e; &#x27;, answer =&#x3e; {
+          this.close();
+
+          answer = answer || optionsOrSuggestion;
+
+          if (answer) {
+            resolve(answer);
+          } else {
+            return this.question(text, optionsOrSuggestion).then(theAnswer =&#x3e; resolve(theAnswer));
+          }
+        });
+      } else {
+        optionsOrSuggestion = optionsOrSuggestion.filter(x =&#x3e; includeOption(this.cliOptions, x));
+
+        if (optionsOrSuggestion.length === 1) {
+          return resolve(optionsOrSuggestion[0]);
+        }
+
+        let defaultOption = optionsOrSuggestion[0];
+        let fullText = os.EOL + text + os.EOL
+          + createOptionsText(this, optionsOrSuggestion) + os.EOL + &#x27;[&#x27; + defaultOption.displayName + &#x27;]&#x27; + &#x27;&#x3e; &#x27;;
+
+        this.open();
+        this.rl.question(fullText, answer =&#x3e; {
+          this.close();
+          resolve(interpretAnswer(answer, optionsOrSuggestion));
+        });
+      }
+    });
+  }
+
+  multiselect(question, options) {
+    return new Promise(resolve =&#x3e; {
+      let info = &#x27;Select one or more options separated by spaces&#x27;;
+      let fullText = os.EOL + question + os.EOL
+          + createOptionsText(this, options, true) + os.EOL + info + os.EOL + &#x27;&#x3e; &#x27;;
+
+      this.open();
+      this.rl.question(fullText, answer =&#x3e; {
+        this.close();
+        let answers = answer.split(&#x27; &#x27;);
+        answers = answers.filter(x =&#x3e; x.length &#x3e; 0);
+        resolve(interpretAnswers(answers, options));
+      });
+    });
+  }
+
+  getWidth() {
+    return getWindowSize().width;
+  }
+
+  getHeight() {
+    return getWindowSize().height;
+  }
+
+  displayLogo() {
+    this.clearScreen();
+
+    if (this.getWidth() &#x3c; 50) {
+      return this.log(&#x27;Aurelia CLI&#x27; + os.EOL);
+    }
+
+    let logoLocation = require.resolve(&#x27;./resources/logo.txt&#x27;);
+
+    return fs.readFile(logoLocation).then(logo =&#x3e; {
+      console.log(logo.toString());
+    });
+  }
+
+  clearScreen() {
+    //let lines = this.getHeight();
+
+    //for(var i = 0; i &#x3c; lines; i++) {
+    //  console.log(&#x27;\r\n&#x27;);
+    //}
+
+    return Promise.resolve();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aurelia-cli.ui.UI" id="apidoc.element.aurelia-cli.ui.UI">
+        function <span class="apidocSignatureSpan">aurelia-cli.ui.</span>UI
+        <span class="apidocSignatureSpan">{{signature}}</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

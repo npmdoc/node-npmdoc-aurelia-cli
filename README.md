@@ -1,6 +1,6 @@
 # npmdoc-aurelia-cli
 
-#### api documentation for  [aurelia-cli (v0.28.0)](http://aurelia.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-aurelia-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-aurelia-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-aurelia-cli.svg)](https://travis-ci.org/npmdoc/node-npmdoc-aurelia-cli)
+#### basic api documentation for  [aurelia-cli (v0.29.0)](http://aurelia.io)  [![npm package](https://img.shields.io/npm/v/npmdoc-aurelia-cli.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-aurelia-cli) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-aurelia-cli.svg)](https://travis-ci.org/npmdoc/node-npmdoc-aurelia-cli)
 
 #### The command line tooling for Aurelia.
 
@@ -59,10 +59,10 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "0dc8554c9bed09634796861543f0343a522d6103",
-        "tarball": "https://registry.npmjs.org/aurelia-cli/-/aurelia-cli-0.28.0.tgz"
+        "shasum": "b261263d41ec4f09452873e82553fd2c816370bd",
+        "tarball": "https://registry.npmjs.org/aurelia-cli/-/aurelia-cli-0.29.0.tgz"
     },
-    "gitHead": "55e487db207a2b3aa8e85c4d44f4f7c8ba238330",
+    "gitHead": "9bfe9bcbe30564a30090b42290fa2711590b96a8",
     "homepage": "http://aurelia.io",
     "keywords": [
         "aurelia",
@@ -90,7 +90,7 @@
         "test": "jasmine",
         "test:watch": "nodemon -x 'npm test'"
     },
-    "version": "0.28.0"
+    "version": "0.29.0"
 }
 ```
 
